@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 18:09:42 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/07 12:58:54 by phelebra         ###   ########.fr       */
+/*   Created: 2023/01/10 17:02:48 by phelebra          #+#    #+#             */
+/*   Updated: 2023/01/16 08:56:46 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdarg.h>
-# include "./libft/libft.h"
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
 
-
-int ft_printf(const char *s, ...);
-
-#endif
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)s)[i] = 0;
+		i++;
+	}
+}
