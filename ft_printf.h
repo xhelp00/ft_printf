@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:09:42 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/07 12:58:54 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:11:36 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include "./libft/libft.h"
 
 
-int ft_printf(const char *s, ...);
+int	ft_printf(const char *s, ...);
+int	ft_putchar(char c);
+int	ft_putstr(char *s);
 
 #endif

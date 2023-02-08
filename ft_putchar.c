@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 15:16:06 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/08 16:08:20 by phelebra         ###   ########.fr       */
+/*   Created: 2023/02/08 16:05:16 by phelebra          #+#    #+#             */
+/*   Updated: 2023/02/08 16:05:33 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_putchar(char c)
 {
-	if (!s)
-	{
-		ft_putstr_fd("NULL", 1);
-		return (4);
-	}
-	ft_putstr_fd(s, 1);
-	return (ft_strlen(s));
+	return (write(1, &c, 1));
 }
