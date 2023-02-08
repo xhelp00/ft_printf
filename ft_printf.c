@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:09:27 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/08 16:55:01 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:12:03 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,8 @@ int	ft_printf(const char *s, ...)
 			i++;
 		}
 		else
-		{
 			size += ft_putchar(s[i]);
-			i++;
-		}
+		i++;
 	}
 	va_end(args);
 	//loop through args
