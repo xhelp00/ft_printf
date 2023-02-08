@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:16:06 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/08 16:08:20 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:52:21 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 int	ft_putstr(char *s)
 {
 	if (!s)
-	{
-		ft_putstr_fd("NULL", 1);
-		return (4);
-	}
+		s = "(null)" ;
 	ft_putstr_fd(s, 1);
 	return (ft_strlen(s));
 }
