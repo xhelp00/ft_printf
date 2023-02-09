@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 18:09:42 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/09 17:02:11 by phelebra         ###   ########.fr       */
+/*   Created: 2023/02/09 17:07:39 by phelebra          #+#    #+#             */
+/*   Updated: 2023/02/09 17:11:48 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdint.h>
-# include "./libft/libft.h"
+int 	ft_putptr(uintptr_t u)
+{
+	char 	*s;
+	int 	size;
 
-
-int		ft_printf(const char *s, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
-int		ft_putnbr(int i);
-
-#endif
+	if (!u)
+	{
+		s = "(nil)";
+		ft_putstr_fd(s, 1);
+		return(ft_strlen(s));
+	}
+}
