@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:09:27 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/08 17:12:03 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/09 16:39:49 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_paramtype(va_list args, char c)
 	else if (c == 'p')
 		size =1;
 	else if (c == 'i' || c == 'd')
-		size =1;
+		size = ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
 		size =1;
 	else if (c == 'x' || c == 'X')

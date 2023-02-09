@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 18:09:42 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/09 16:37:05 by phelebra         ###   ########.fr       */
+/*   Created: 2023/02/09 16:32:27 by phelebra          #+#    #+#             */
+/*   Updated: 2023/02/09 16:36:04 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include "./libft/libft.h"
+int 	ft_putnbr(int i)
+{
+	char	*s;
+	int		size;
 
-
-int		ft_printf(const char *s, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
-int		ft_putnbr(int i);
-
-#endif
+	s = ft_itoa(i);
+	size = ft_putstr(s);
+	free(s);
+	return(size);
+}
