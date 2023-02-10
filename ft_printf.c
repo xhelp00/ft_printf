@@ -6,15 +6,11 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:09:27 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/10 12:46:59 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:50:53 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-//the function checking parameters
-	// if/else for each case csdiupxX%
-	// each case will call its own function handling particular type
 
 int	ft_paramtype(va_list args, char c)
 {
@@ -59,8 +55,5 @@ int	ft_printf(const char *s, ...)
 		i++;
 	}
 	va_end(args);
-	//loop through args
-	//call the function checking parameters
-	//upon successful return, these functions return the number o characters printed
 	return (size);
 }

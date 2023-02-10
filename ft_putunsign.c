@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 12:37:03 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/10 12:45:31 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:54:29 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,9 @@ int	ft_putunsign(unsigned int ui)
 
 	if (!ui)
 	{
-		write(1,"0",1);
+		write(1, "0", 1);
 		return (1);
 	}
-	
 	s = ft_itoausign(ui);
 	size = ft_putstr(s);
 	free(s);

@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:07:39 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/10 10:42:14 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:53:25 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ static char	*ft_itohex(uintptr_t u)
 
 int	ft_putptr(uintptr_t u)
 {
-	char 	*s;
-	int 	size;
+	char	*s;
+	int		size;
 
 	size = 0;
 	s = NULL;
@@ -60,7 +60,7 @@ int	ft_putptr(uintptr_t u)
 	{
 		s = "(nil)";
 		ft_putstr_fd(s, 1);
-		return(ft_strlen(s));
+		return (ft_strlen(s));
 	}
 	size += write (1, "0x", 2);
 	s = ft_itohex(u);

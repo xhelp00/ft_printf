@@ -6,13 +6,13 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:32:27 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/09 16:36:04 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:51:44 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int 	ft_putnbr(int i)
+int	ft_putnbr(int i)
 {
 	char	*s;
 	int		size;
@@ -20,5 +20,5 @@ int 	ft_putnbr(int i)
 	s = ft_itoa(i);
 	size = ft_putstr(s);
 	free(s);
-	return(size);
+	return (size);
 }

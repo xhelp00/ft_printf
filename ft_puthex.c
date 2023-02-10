@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 12:13:33 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/10 12:22:46 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:53:09 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_puthex(unsigned int ui, char xchar)
 
 	if (!ui)
 	{
-		write(1,"0",1);
+		write (1, "0", 1);
 		return (1);
 	}
 	if (xchar == 'X')
