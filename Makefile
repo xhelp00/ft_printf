@@ -6,52 +6,37 @@
 #    By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 18:10:21 by phelebra          #+#    #+#              #
-#    Updated: 2023/02/10 10:20:13 by phelebra         ###   ########.fr        #
+#    Updated: 2023/02/10 12:01:57 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c \
-	libft/ft_putchar_fd.c libft/ft_putstr_fd.c ft_putptr.c \
-	libft/ft_strlen.c libft/ft_itoa.c
+SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_putptr.c 
 
-OBJ = ${SRC:.c=.o} ${LIBFT_OBJ}
-
-LIBFT_OBJ = ${SRC:.c=.o}
-
-LIBFT_INC = -Ilibft
-
-INC = ft_printf
-
+INC = ft_printf.h
+OBJ = $(SRC:.c=.o)
 NAME = libftprintf.a
-
-LIBFT = libft
-
-LIBC = ar rc
-
-LIBR = ranlib
-
 RM = rm -f
+CFLAGS = -Wall -Wextra -Werror
+LIBC = ar rc
+LIBFT = ./libft/libft.a
 
-CFLAGS = -Wall -Wextra -Werror ${LIBFT_INC}
-
-.c.o: 
+.c.o:
 	cc ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INC}
+
 ${NAME}: ${OBJ}
+	make -C ./libft
+	cp ./libft/libft.a ${NAME}
 	${LIBC} ${NAME} ${OBJ}
-	${LIBR} ${NAME}
-	-l${LIBFT}
 
-all: ${NAME} ${LIBFT}
-
-#${LIBFT}: ${LIBFT_OBJ}
-#	ar rc ${LIBFT} ${LIBFT_OBJ}
-#	ranlib ${LIBFT}
+all: ${NAME}
 
 clean:
-	rm -f ${OBJ} ${LIBFT_OBJ}
+	${MAKE} clean -C ./libft
+	${RM} ${OBJ}
+	${RM} ${BONUS_O}
 
-fclean: clean
-		rm -f ${NAME}
-re:		fclean all
+fclean:	clean
+	${MAKE} fclean -C ./libft
+	${RM} ${NAME}
 
-.PHONY:		all clean fclean re
+re: fclean all
