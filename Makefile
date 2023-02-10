@@ -6,12 +6,12 @@
 #    By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 18:10:21 by phelebra          #+#    #+#              #
-#    Updated: 2023/02/09 16:40:47 by phelebra         ###   ########.fr        #
+#    Updated: 2023/02/10 10:20:13 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c \
-	libft/ft_putchar_fd.c libft/ft_putstr_fd.c \
+	libft/ft_putchar_fd.c libft/ft_putstr_fd.c ft_putptr.c \
 	libft/ft_strlen.c libft/ft_itoa.c
 
 OBJ = ${SRC:.c=.o} ${LIBFT_OBJ}
