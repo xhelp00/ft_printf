@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:09:42 by phelebra          #+#    #+#             */
-/*   Updated: 2023/02/10 10:15:53 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:21:38 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int		ft_putchar(char c);
 int		ft_putstr(char *s);
 int		ft_putnbr(int i);
 int		ft_putptr(uintptr_t u);
+int		ft_puthex(unsigned int ui, char xchar);
+
 
 
 #endif

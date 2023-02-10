@@ -6,11 +6,11 @@
 #    By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 18:10:21 by phelebra          #+#    #+#              #
-#    Updated: 2023/02/10 12:01:57 by phelebra         ###   ########.fr        #
+#    Updated: 2023/02/10 12:22:06 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_putptr.c 
+SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_putptr.c ft_puthex.c
 
 INC = ft_printf.h
 OBJ = $(SRC:.c=.o)
